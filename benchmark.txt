@@ -1,0 +1,162 @@
+gcc 4.9.1 -O3, Ubuntu 14.10 amd64(3.16.0-23), Intel Xeon E3-1230 V2
+
+-----------------
+Regex: 'Twain'
+[    pcre] time:    16 ms (2388 matches)
+[pcre-dfa] time:    14 ms (2388 matches)
+[     tre] time:   309 ms (2388 matches)
+[    onig] time:    15 ms (2388 matches)
+[     re2] time:     2 ms (2388 matches)
+[pcre-jit] time:    11 ms (2388 matches)
+[std::regex] time:   346 ms (2388 matches)
+[boost::regex] time:    13 ms (2388 matches)
+-----------------
+Regex: '^Twain'
+[    pcre] time:   118 ms (100 matches)
+[pcre-dfa] time:   126 ms (100 matches)
+[     tre] time:   183 ms (100 matches)
+[    onig] time:    15 ms (100 matches)
+[     re2] time:    66 ms (100 matches)
+[pcre-jit] time:    11 ms (100 matches)
+[std::regex] time:   312 ms (0 matches)
+[boost::regex] time:    19 ms (100 matches)
+-----------------
+Regex: 'Twain$'
+[    pcre] time:    12 ms (127 matches)
+[pcre-dfa] time:    13 ms (127 matches)
+[     tre] time:   328 ms (127 matches)
+[    onig] time:    15 ms (127 matches)
+[     re2] time:     1 ms (127 matches)
+[pcre-jit] time:    11 ms (127 matches)
+[std::regex] time:   345 ms (0 matches)
+[boost::regex] time:    13 ms (127 matches)
+-----------------
+Regex: 'Huck[a-zA-Z]+|Finn[a-zA-Z]+'
+[    pcre] time:    18 ms (83 matches)
+[pcre-dfa] time:    18 ms (83 matches)
+[     tre] time:   540 ms (83 matches)
+[    onig] time:    40 ms (83 matches)
+[     re2] time:    56 ms (83 matches)
+[pcre-jit] time:    22 ms (83 matches)
+[std::regex] time:  1982 ms (83 matches)
+[boost::regex] time:    12 ms (83 matches)
+-----------------
+Regex: 'a[^x]{20}b'
+[    pcre] time:    67 ms (12259 matches)
+[pcre-dfa] time:   357 ms (12259 matches)
+[     tre] time:   627 ms (12259 matches)
+[    onig] time:   367 ms (12259 matches)
+[     re2] time:   398 ms (12259 matches)
+[pcre-jit] time:    45 ms (12259 matches)
+[std::regex] time:   558 ms (12259 matches)
+[boost::regex] time:   102 ms (12259 matches)
+-----------------
+Regex: 'Tom|Sawyer|Huckleberry|Finn'
+[    pcre] time:    24 ms (3015 matches)
+[pcre-dfa] time:    26 ms (3015 matches)
+[     tre] time:   945 ms (3015 matches)
+[    onig] time:    48 ms (3015 matches)
+[     re2] time:    60 ms (3015 matches)
+[pcre-jit] time:    24 ms (3015 matches)
+[std::regex] time:  2886 ms (3015 matches)
+[boost::regex] time:    18 ms (3015 matches)
+-----------------
+Regex: '.{0,3}(Tom|Sawyer|Huckleberry|Finn)'
+[    pcre] time:  4233 ms (3015 matches)
+[pcre-dfa] time:  4630 ms (3015 matches)
+[     tre] time:  3290 ms (3015 matches)
+[    onig] time:   151 ms (3015 matches)
+[     re2] time:    69 ms (3015 matches)
+[pcre-jit] time:   449 ms (3015 matches)
+[std::regex] time: 13429 ms (3015 matches)
+[boost::regex] time:  1270 ms (3015 matches)
+-----------------
+Regex: '[a-zA-Z]+ing'
+[    pcre] time:   776 ms (95863 matches)
+[pcre-dfa] time:  1338 ms (95863 matches)
+[     tre] time:   644 ms (95863 matches)
+[    onig] time:   954 ms (95863 matches)
+[     re2] time:   113 ms (95863 matches)
+[pcre-jit] time:   188 ms (95863 matches)
+[std::regex] time:  1199 ms (95863 matches)
+[boost::regex] time:   243 ms (95863 matches)
+-----------------
+Regex: '^[a-zA-Z]{0,4}ing[^a-zA-Z]'
+[    pcre] time:   141 ms (4507 matches)
+[pcre-dfa] time:   154 ms (4507 matches)
+[     tre] time:   296 ms (4507 matches)
+[    onig] time:    32 ms (4507 matches)
+[     re2] time:    66 ms (4507 matches)
+[pcre-jit] time:    35 ms (4507 matches)
+[std::regex] time:  1715 ms (0 matches)
+[boost::regex] time:    36 ms (4483 matches)
+-----------------
+Regex: '[a-zA-Z]+ing$'
+[    pcre] time:   816 ms (5360 matches)
+[pcre-dfa] time:  1389 ms (5360 matches)
+[     tre] time:   635 ms (5360 matches)
+[    onig] time:   976 ms (5360 matches)
+[     re2] time:   100 ms (5360 matches)
+[pcre-jit] time:   202 ms (5360 matches)
+[std::regex] time:  1241 ms (0 matches)
+[boost::regex] time:   232 ms (5360 matches)
+-----------------
+Regex: '^[a-zA-Z ]{5,}$'
+[    pcre] time:   179 ms (26236 matches)
+[pcre-dfa] time:   291 ms (26236 matches)
+[     tre] time:   384 ms (26236 matches)
+[    onig] time:   296 ms (26236 matches)
+[     re2] time:    74 ms (26236 matches)
+[pcre-jit] time:    53 ms (26236 matches)
+[std::regex] time:   310 ms (0 matches)
+[boost::regex] time:    73 ms (26236 matches)
+-----------------
+Regex: '^.{16,20}$'
+[    pcre] time:   168 ms (4902 matches)
+[pcre-dfa] time:   242 ms (4902 matches)
+[     tre] time:   358 ms (4902 matches)
+[    onig] time:   437 ms (4902 matches)
+[     re2] time:    66 ms (4901 matches)
+[pcre-jit] time:    38 ms (4902 matches)
+[std::regex] time:  1716 ms (0 matches)
+[boost::regex] time:    74 ms (13458 matches)
+-----------------
+Regex: '([a-f](.[d-m].){0,2}[h-n]){2}'
+[    pcre] time:   576 ms (68621 matches)
+[pcre-dfa] time:   873 ms (68621 matches)
+[     tre] time:   849 ms (68621 matches)
+[    onig] time:   552 ms (68621 matches)
+[     re2] time:   106 ms (68621 matches)
+[pcre-jit] time:   111 ms (68621 matches)
+[std::regex] time:  3620 ms (68621 matches)
+[boost::regex] time:  1537 ms (68621 matches)
+-----------------
+Regex: '([A-Za-z]awyer|[A-Za-z]inn)[^a-zA-Z]'
+[    pcre] time:   759 ms (675 matches)
+[pcre-dfa] time:   948 ms (675 matches)
+[     tre] time:   925 ms (675 matches)
+[    onig] time:   204 ms (675 matches)
+[     re2] time:    98 ms (675 matches)
+[pcre-jit] time:   120 ms (675 matches)
+[std::regex] time:   932 ms (675 matches)
+[boost::regex] time:  1307 ms (675 matches)
+-----------------
+Regex: '"[^"]{0,30}[?!\.]"'
+[    pcre] time:    24 ms (5953 matches)
+[pcre-dfa] time:    36 ms (5953 matches)
+[     tre] time:   410 ms (5953 matches)
+[    onig] time:    65 ms (5953 matches)
+[     re2] time:     7 ms (5947 matches)
+[pcre-jit] time:    20 ms (5953 matches)
+[std::regex] time:  1881 ms (5953 matches)
+[boost::regex] time:    18 ms (5953 matches)
+-----------------
+Regex: 'Tom.{10,25}river|river.{10,25}Tom'
+[    pcre] time:    52 ms (2 matches)
+[pcre-dfa] time:    64 ms (2 matches)
+[     tre] time:   524 ms (2 matches)
+[    onig] time:    77 ms (2 matches)
+[     re2] time:    62 ms (2 matches)
+[pcre-jit] time:    30 ms (2 matches)
+[std::regex] time:  2093 ms (2 matches)
+[boost::regex] time:    41 ms (4 matches)
