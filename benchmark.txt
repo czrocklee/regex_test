@@ -1,5 +1,12 @@
 gcc 4.9.1 -O3, Ubuntu 14.10 amd64(3.16.0-23), Intel Xeon E3-1230 V2
 
+std::regex   	gcc 4.9.1
+boost::regex 	1.55
+pcre		8.32
+tre		0.8.0
+onig		5.9.3
+re2		2012.10.29
+
 -----------------
 Regex: 'Twain'
 [    pcre] time:    16 ms (2388 matches)
